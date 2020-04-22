@@ -1,0 +1,27 @@
+html {
+  height: 100%;
+}
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Open Sans", sans-serif;
+}
+.center_h1 {
+  display: inline-block;
+  font-family: "Open Sans";
+  text-decoration: none;
+}
+.center_h1 a {
+  text-decoration: none;
+}
+.bgimg {
+  background-image: url("img.png");
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
