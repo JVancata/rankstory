@@ -25,3 +25,55 @@ h5 {
   background-size: cover;
   background-attachment: fixed;
 }
+
+.head-icon {
+  width: 72px;
+  height: 72px;
+  background-image: url("img/heads2.png");
+}
+
+.bg-story-color {
+  background-color: #182c44;
+}
+
+.player-name {
+  display: block;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.player-guild {
+  display: block;
+  font-size: 1.1rem;
+  color: white;
+}
+
+.player-kills {
+  color: white;
+  font-size: 2rem;
+  display: block;
+  text-align: center;
+}
+
+.position {
+  display: block;
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+}
+
+.rank {
+  width: 72px;
+  height: 72px;
+}
+
+.bg-derion {
+  background-image: url("img/derion.png");
+  background-size: cover;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 780px;
+  }
+}

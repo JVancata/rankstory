@@ -28,13 +28,15 @@ class Db
     }
 
 
-    public function testGet()
+    public function getAllPlayers()
     {
-        $query = 'SELECT * FROM gameUsers';
+        $query = 'SELECT 
+        (kills*10 - deaths*10) - 4*475 AS elo, 
+        charName, kills, deaths, gameName, guildName FROM gameUsers ORDER BY elo desc';
         $prepared = $this->db->prepare($query);
         $prepared->execute();
         $values = $prepared->fetchAll(PDO::FETCH_ASSOC);
-
+        
         return $values;
     }
 
