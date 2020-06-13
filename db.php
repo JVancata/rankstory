@@ -24,6 +24,7 @@ class Db
         }
         catch (Exception $e) {
             echo "Db connection error";
+            exit();
         }
     }
 
