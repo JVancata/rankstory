@@ -1,7 +1,9 @@
 <?php
     require 'functions.php';
     $db = new Db();
-    $players = $db->getAllPlayers();
+
+    // $players = $db->getAllPlayers();
+    $players = $db->getArenaPlayers();
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +25,8 @@
     <div class="row no-gutters">
         <?php
             for($i=0; $i<count($players); $i++) {
-                getPlayerCard($players[$i], $i+1);
+                //getPlayerCard($players[$i], $i+1);
+                getArenaCard($players[$i], $i+1);
             }
         ?>
     </div>
