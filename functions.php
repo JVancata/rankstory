@@ -57,18 +57,22 @@
     $playerIconY = $playerNameNumber%6;
     echo '
       <div class="col-12 row no-gutters bg-story-color py-3 my-2">
-          <div class="col-2">
+          <div class="col-3">
               <span class="position pt-2">'.$position.'.</span>
           </div>
-          <div class="col-2">
-              <span
-              style="background-position: '.($playerIconX*72).'px '.($playerIconY*72).'px"
-              class="d-block head-icon">
-              </span>
-          </div>
-          <div class="col-3">
-              <span class="player-name">'.$captainName.'</span>
-              <span class="player-guild">'.$teamMembers.'</span>
+          <div class="col-4">
+            <div class="col-12 row no-gutters p-0">
+              <div class="col-2 d-none d-md-block">
+                <span
+                  style="background-position: '.($playerIconX*36).'px '.($playerIconY*36).'px"
+                  class="d-inline-block head-icon">
+                </span>
+              </div>
+              <div class="col-10">
+                <span class="player-name">'.$captainName.'</span>
+              </div>
+            </div>
+            <span class="player-guild">'.$teamMembers.'</span>
           </div>
           <div class="col-5">
               <span class="player-kills pt-2">'.$totalWinCount.' výher</span>

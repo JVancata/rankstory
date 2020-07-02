@@ -27,9 +27,9 @@ h5 {
 }
 
 .head-icon {
-  width: 72px;
-  height: 72px;
-  background-image: url("img/heads2.png");
+  width: 36px;
+  height: 36px;
+  background-image: url("img/heads.png");
 }
 
 .bg-story-color {
@@ -37,7 +37,8 @@ h5 {
 }
 
 .player-name {
-  display: block;
+  display: inline-block;
+  padding-bottom: 5px;
   font-size: 1.5rem;
   color: white;
 }
