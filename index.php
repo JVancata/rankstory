@@ -22,7 +22,7 @@
 </head>
 
 <body class="bgimg container">
-    <div class="row no-gutters">
+    <div class="row no-gutters" style="padding-top:250px;">
         <?php
             for($i=0; $i<count($players); $i++) {
                 //getPlayerCard($players[$i], $i+1);
