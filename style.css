@@ -44,6 +44,12 @@ h5 {
   color: white;
 }
 
+.player-name-drop {
+  display: inline-block;
+  font-size: 2rem;
+  color: white;
+}
+
 .player-guild {
   display: block;
   font-size: 1.1rem;
@@ -74,8 +80,41 @@ h5 {
   background-size: cover;
 }
 
+.button {
+  background-image: url("img/button.png");
+  background-size: cover;
+  font-weight: bold;
+  color: white!important;
+  font-size: 1.5rem;
+}
+
+.button-gold {
+  background-image: url("img/button-gold.png");
+  background-size: cover;
+  font-weight: bold;
+  color: white!important;
+  font-size: 1.5rem;
+}
+
+.button:hover {
+  color: wheat!important;
+}
+
+.button-div {
+  justify-content: space-evenly;
+  display: flex;
+  width: 100%;
+}
+
 @media (min-width: 1200px) {
-  .container {
+  .container-tight {
     max-width: 780px;
   }
+  .container {
+    max-width: 900px;
+  }
+}
+
+.m-0-auto {
+  margin: 0 auto;
 }

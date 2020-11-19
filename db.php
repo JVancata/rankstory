@@ -69,5 +69,46 @@ class Db
         ));
         return $status;
     }
+
+    // Drop event
+    public function insertDropLog($playerName, $dateInserted, $type)
+    {
+        $query = 'INSERT INTO drops (playerName, dateInserted, type)
+        VALUES (:playerName, :dateInserted, :type)';
+        $prepared = $this->db->prepare($query);
+        $status = $prepared->execute(array(
+            ':playerName' => $playerName,
+            ':dateInserted' => $dateInserted,
+            ':type' => $type,
+        ));
+        return $status;
+    }
+
+    // Drop event
+    public function selectAllDropLogsForSpecificDay($day)
+    {
+        //$query = 'SELECT COUNT(playerName) AS stackCount, playerName, type FROM drops WHERE DAYOFWEEK(dateInserted) = :day ORDER BY COUNT(playerName) GROUP BY playerName, type;';
+        $query = 'SELECT COUNT(playerName) AS stackCount, playerName FROM drops WHERE DAYOFWEEK(dateInserted) = :day GROUP BY playerName ORDER BY(stackCount) DESC;';
+        $prepared = $this->db->prepare($query);
+        $status = $prepared->execute(array(
+            ':day' => $day
+        ));
+        $values = $prepared->fetchAll(PDO::FETCH_ASSOC);
+        return $values;
+    }
+
+    // Drop event
+    public function selectDropLogs($type)
+    {
+        $query = 'SELECT COUNT(playerName) AS stackCount, playerName, type FROM drops WHERE type = :type GROUP BY playerName, type ORDER BY stackCount, playerName asc;';
+        $prepared = $this->db->prepare($query);
+        $status = $prepared->execute(array(
+            ":type" => $type
+        ));
+        $values = $prepared->fetchAll(PDO::FETCH_ASSOC);
+        return $values;
+    }
+
+
 }
 ?>
